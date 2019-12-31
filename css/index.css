@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Playfair+Display&display=swap');
+
+:root{
+    font-family: Playfair Display , sans-serif;
+    --main-color: black;
+}
+
+header .logo{
+font-family: Merriweather;
+font-size: 3rem;
+text-align: center;
+margin: 5px 0;
+}
+h1{
+font-family: Merriweather;
+font-size: 3rem;
+}
+header nav .menu{
+display:flex;
+list-style:none;
+padding:0;
+justify-content:space-around;
+border:1px solid transparent;
+}
+
+header nav .menu a{
+text-transform: upper-case;
+text-decoration: none;
+color: var(--main-color);
+padding:5px;
+}
+
+header nav .menu a:hover {
+border:1px solid var(--main-color);
+padding:5px;
+}
+
+@media (min-width: 600px){
+    header nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around; 
+    }
+}
+img{
+  width: 100%;  
+}
+header .menu{
+    flex:1;
+}
