@@ -36,3 +36,7 @@ const todoContainer = document.querySelector('.todos');
 todoContainer.appendChild(item);
 todoInput.value = " "; 
 }
+
+$('.like').click(function(){
+$('p') .toggle(2000);
+});
