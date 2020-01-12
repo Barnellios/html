@@ -1,42 +1,19 @@
-if(Math.random() > 0.5){
-const link = document.querySelector("a");
-link.textContent = 'Dart Weider';
-link.href = "https://beautyofglass.com"
-}
-const sect = document.querySelector("section");
+      alert('Wanna buy new phone');
+      const btnAdd = document.querySelector('.add');
+      btnAdd.addEventListener('click',addTask);
 
-for( let i = 0; i <10 ; i++){
-const para = document.createElement("p");
-para.textContent = 'We hope you enjoyed the ride.';
-sect.appendChild(para);
-}
-
-const linkPara = document.querySelector('p');
-sect.appendChild(linkPara);
-
-linkPara.style.color = 'white';
-linkPara.style.backgroundColor = 'black';
-linkPara.style.padding = '10px';
-linkPara.style.width = '250px';
-linkPara.style.textAlign = 'center';
-
-linkPara.classList.add('mark');
-
-const clockContainer = document.querySelector('.clock');
-setInterval(() => clockContainer.innerText = new Date().toLocaleTimeString(), 1000);
-
-const btnAdd = document.querySelector('.add');
-btnAdd.addEventListener('click', addToDo);
-
-function addToDo(){
-const todoInput = document.querySelector('.todo');
-const item = document.createElement('li');
-item.innerText = todoInput.value;
-const todoContainer = document.querySelector('.todos');
-todoContainer.appendChild(item);
-todoInput.value = " "; 
-}
-
-$('.like').click(function(){
-$('p') .toggle(2000);
-});
+      const btnDelete = document.querySelector('.delete');
+      btnDelete.addEventListener('click', remove) ;
+      
+      function addTask(){
+          const addBtn = document.createElement('button');
+          const textInput = document.querySelector('.tasks');
+          const item = document.createElement('li');
+          item.innerText = textInput.value;
+          const taskContainer = document.querySelector('.manyItems');
+          taskContainer.appendChild(item);
+          textInput.value = '';
+          btnDelete.addEventListener('click', remove) ;
+          }
+          
+      
